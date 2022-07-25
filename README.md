@@ -1,8 +1,10 @@
-# SubQuery - Starter Package
+# SubQuery - Starter Package fork for Astar Fireside Chat #002 - Develop dApps using SubQuery
 
+This repo accompanies the Fireside Chats Episode 002 which you can reply from here:
 
-The Starter Package is an example that you can use as a starting point for developing your SubQuery project.
-A SubQuery package defines which data The SubQuery will index from the Substrate blockchain, and how it will store it. 
+[Astar Fireside Chat #002 - Develop dApps using SubQuery](https://www.crowdcast.io/e/fireside_chat_002_subquery)
+
+Prepartion sections is the same as for any other SubQuery Starter Package project.
 
 ## Preparation
 
@@ -60,6 +62,8 @@ Run this command under the project directory.
 yarn codegen
 ````
 
+Example used for the Astar's Fireside Chats 003 - 
+
 ## Build the project
 
 In order to deploy your SubQuery project to our hosted service, it is mandatory to pack your configuration before upload.
@@ -89,14 +93,13 @@ For the `subql-starter` project, you can try to query with the following code to
 
 ````graphql
 {
-  query{
-    starterEntities(first:10){
-      nodes{
-        field1,
-        field2,
-        field3
-      }
+  query {
+    tvls (last:10) {
+    nodes {
+      id
+      tvl
     }
   }
+}
 }
 ````
